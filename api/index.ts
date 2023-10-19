@@ -43,3 +43,5 @@ app.use((error: AppError, req: express.Request, res: express.Response, next: exp
 		}
 	});
 });
+
+module.exports = app;
