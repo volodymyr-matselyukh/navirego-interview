@@ -5,9 +5,9 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
 import mongoose from "mongoose";
-import router from "./router/index";
+import router from "../src/router/index";
 import dotenv from 'dotenv';
-import { AppError, HttpCode } from "./appError";
+import { AppError, HttpCode } from "../src/appError";
 
 dotenv.config();
 
