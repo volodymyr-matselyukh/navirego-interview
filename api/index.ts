@@ -26,7 +26,7 @@ server.listen(8080, () => {
 	console.log("server running on http://localhost:8080/");
 });
 
-app.use('/', router());
+app.use('/api', router());
 
 app.use((req, res, next) => {
 	const error = new AppError({description: "Not found", statusCode: HttpCode.NOT_FOUND});
