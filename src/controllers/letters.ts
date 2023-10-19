@@ -10,7 +10,7 @@ const texts = [
 	"God save our gracious King! Long live our noble King! God save the King! Send him victorious,Happy and glorious,Long to reign over us:God save the King!"
 ];
 
-const secondsDelay = 2;
+const secondsDelay = 2; 
 
 const getLetterForGenerator = (generatorId: number) => {
 	const milliseconds = new Date().getTime();
