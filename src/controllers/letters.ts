@@ -26,7 +26,6 @@ const getLetterForGenerator = (generatorId: number) => {
 	currentIndex = Math.round(currentIndex / secondsDelay);
 
 	return {
-		letter_index: currentIndex,
 		letter: neededText[currentIndex]
 	}
 }
@@ -71,9 +70,9 @@ export const getLetter = async (req: express.Request, res: express.Response, nex
 		if(shouldReturnTeapot())
 		{
 			return res.status(418).json(
-				{
-					message: "I am too tired. Try the next time."
-				});
+			{
+				message: "I am too tired. Try the next time."
+			});
 		}
 
 		const letterIndex = getLetterForGenerator(generatorNumber);
