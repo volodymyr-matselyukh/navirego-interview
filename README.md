@@ -1,0 +1,1 @@
+This repo has a bad name. This repo actually contains a boilerplate for Node.JS api projects. Don't use authentication from this project. It seems to me as a bad written one.
