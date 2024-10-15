@@ -21,12 +21,12 @@ const getLetterForGenerator = (generatorId: number) => {
 
 	const textLength = neededText.length;
 
-	let currentIndex = seconds % (textLength * secondsDelay);
-
-	currentIndex = Math.round(currentIndex / secondsDelay);
+	let currentIndex = seconds % textLength;
+	currentIndex = (Math.floor(currentIndex / secondsDelay));
 
 	return {
-		letter: neededText[currentIndex]
+		letter: neededText[currentIndex],
+		index: currentIndex
 	}
 }
 
@@ -75,9 +75,9 @@ export const getLetter = async (req: express.Request, res: express.Response, nex
 			});
 		}
 
-		const letterIndex = getLetterForGenerator(generatorNumber);
+		const letterInfo = getLetterForGenerator(generatorNumber);
 
-		return res.status(200).json(letterIndex);
+		return res.status(200).json(letterInfo);
 
 	} catch (error) {
 		console.error(error);
