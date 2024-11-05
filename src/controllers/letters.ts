@@ -7,7 +7,8 @@ const texts = [
 	"Thou art the ruler of the minds of all people,dispenser of India's destiny. Thy name rouses the hearts of the Punjab, Sindh, Gujarat and Maratha,of the Dravida, Orissa and Bengal. It echoes in the hills of the Vindhyas and Himalayas, mingles in the music of the Yamuna and Gangesand is chanted by the waves of the Indian Sea. They pray for thy blessings and sing thy praise. The saving of all people waits in thy hand,thou dispenser of India's destiny. Victory, Victory, Victory to thee.",
 	"Allons enfants de la Patrie,Le jour de gloire est arrivé! Contre nous de la tyrannie L'étendard sanglant est levé, (bis)Entendez-vous dans les campagnesMugir ces féroces soldats? Ils viennent jusque dans vos brasÉgorger vos fils, vos compagnes! Aux armes, citoyens, Formez vos bataillons, Marchons, marchons! Qu'un sang impur Abreuve nos sillons!",
 	"Deutschland, Deutschland über alles,Über alles in der Welt, Wenn es stets zu Schutz und TrutzeBrüderlich zusammenhält. Von der Maas bis an die Memel,Von der Etsch bis an den Belt,Deutschland, Deutschland über alles,Über alles in der Welt!",
-	"God save our gracious King! Long live our noble King! God save the King! Send him victorious,Happy and glorious,Long to reign over us:God save the King!"
+	"God save our gracious King! Long live our noble King! God save the King! Send him victorious,Happy and glorious,Long to reign over us:God save the King!",
+	"1234567890"
 ];
 
 const secondsDelay = 2; 
@@ -59,7 +60,7 @@ export const getLetter = async (req: express.Request, res: express.Response, nex
 			});
 		}
 
-		if (generatorNumber < 0 || generatorNumber > 6) {
+		if (generatorNumber < 0 || generatorNumber > texts.length - 1) {
 			return res.status(400).json({
 				error: {
 					message: "index out or range"
